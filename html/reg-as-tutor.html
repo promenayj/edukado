@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Register as tutor</title>
+</head>
+<body>
+
+   <!-- Header -->
+   <nav>
+    <div class="logo">
+      <img src="../img/logo.png" alt="">
+      <h1>Edukado</h1>
+    </div>
+    <div class="tabs">
+      <a href="index.html" class="active">Home</a>
+      <a href="tutors.html">Find Tutors</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="create">Create an account</a>
+    </div>
+  </nav>
+
+  <form class="reg-as-tutor">
+    <h1>Create account as tutor</h1>
+    <label for="bio">Create a short description of yourself</label>
+    <textarea id="bio" name="w3review" rows="4" cols="50"></textarea>
+    <label for="topic">Enter your topic/subject specialization. e.g. Math, Physics </label>
+    <input type="text">
+  </form>
+</body>
+</html>

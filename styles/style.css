@@ -1,0 +1,575 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 10px;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+input:required, select:required {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.msg {
+  background: #106cbd;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 3rem;
+  display: none;
+}
+
+.msg p {
+  margin: 0;
+}
+
+.tutor-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 10rem;
+  gap: 10rem;
+}
+
+.search-info {
+  width: 240px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.search-info .slider {
+  margin: 2rem 0;
+  position: relative;
+}
+
+.search-info .slider .rate-val {
+  width: 80px;
+}
+
+.search-info .slider #rate {
+  margin-top: 2rem;
+}
+
+.search-info .slider .max, .search-info .slider .min {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  color: #707070;
+  font-size: 1.4rem;
+}
+
+.search-info .slider .min {
+  left: 0;
+}
+
+.search-info input, .search-info select, .search-info button {
+  border-radius: .5rem;
+  padding: 1rem;
+  border: 1px solid #707070;
+}
+
+.search-info select {
+  color: #707070;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(../img/icon/dropdown.png) no-repeat right, white;
+  background-size: 1.5rem;
+  background-position-x: 97%;
+}
+
+.search-info p, .search-info span {
+  color: #707070;
+}
+
+.search-info button {
+  cursor: pointer;
+  background: #106cbd;
+  color: white;
+  border: none;
+  border-radius: .5rem;
+  position: relative;
+  border: 1px solid #106cbd;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.search-info button:active {
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  bottom: .1rem;
+}
+
+.search-info button:hover {
+  color: #106cbd;
+  border: 1px solid #106cbd;
+  background: transparent;
+}
+
+.tutors-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #EBEBEB;
+  height: 230px;
+  width: 680px;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+}
+
+.tutors-info .details {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  position: relative;
+}
+
+.tutors-info .details p {
+  font-size: 1.4rem;
+  color: #707070;
+}
+
+.tutors-info .details .actions {
+  position: absolute;
+  bottom: 1rem;
+}
+
+.tutors-info .details .actions button {
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border: none;
+  border: 1px solid transparent;
+  font-size: 1.4rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.tutors-info .details .actions .book-now {
+  color: white;
+  background: #106cbd;
+}
+
+.tutors-info .details .actions .book-now:hover {
+  border: 1px solid #106cbd;
+  background: transparent;
+  color: #106cbd;
+}
+
+.tutors-info .details .actions .message {
+  background: #C4C4C4;
+}
+
+.tutors-info .details .actions .message:hover {
+  border: 1px solid #707070;
+  background: transparent;
+  color: #707070;
+}
+
+.tutors-info h1 {
+  font-size: 2.8rem;
+}
+
+.tutors-info img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  background: white;
+  height: 100%;
+}
+
+/* reg-as-tutor ********************************************************************/
+.reg-as-tutor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4rem;
+  background: red;
+}
+
+.reg-as-tutor h1 {
+  color: #106cbd;
+  font-weight: 700;
+}
+
+.reg-as-tutor label {
+  color: #707070;
+  font-size: 1.4rem;
+}
+
+.reg-as-tutor textarea {
+  width: 40rem;
+  height: 10rem;
+}
+
+.reg-as-tutor input, .reg-as-tutor button, .reg-as-tutor textarea {
+  border-radius: .5rem;
+  width: 40rem;
+  padding: 1rem;
+  border: 1px solid #707070;
+}
+
+/* Header ***********************************************************************************/
+nav {
+  position: relative;
+  z-index: 10;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 10rem;
+  -webkit-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+}
+
+nav h1 {
+  font-size: 2rem;
+}
+
+nav .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 4rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  position: relative;
+}
+
+nav .tabs a {
+  text-decoration: none;
+  color: #106cbd;
+  -webkit-transition: .3s;
+  transition: .3s;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+nav .tabs a:hover {
+  color: #707070;
+}
+
+nav .tabs .active {
+  position: relative;
+}
+
+nav .tabs .active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: .3rem;
+  background: #106cbd;
+}
+
+nav .tabs .create {
+  height: 40px;
+  padding: 1rem 2rem;
+  border-radius: .5rem;
+  border: 2px solid #106cbd;
+}
+
+nav .tabs .create:hover {
+  background: #106cbd;
+  color: white;
+}
+
+nav .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .logo h1 {
+  color: #106cbd;
+}
+
+nav .logo img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 50%;
+}
+
+/* Sign up ***********************************************************************************/
+.sign-up, .sign-in {
+  margin: 5rem auto;
+  height: 60rem;
+  width: 110rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #E7E7E7;
+}
+
+.sign-up img, .sign-in img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 50%;
+}
+
+.sign-up form, .sign-in form {
+  margin: auto;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  gap: 2rem;
+}
+
+.sign-up form > div, .sign-in form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 2rem;
+}
+
+.sign-up form h1, .sign-in form h1 {
+  color: #106cbd;
+  font-weight: 700;
+}
+
+.sign-up form p, .sign-in form p {
+  margin: 0;
+  margin-bottom: 2rem;
+  color: #707070;
+}
+
+.sign-up form input, .sign-up form select, .sign-up form button, .sign-up form .user-type, .sign-in form input, .sign-in form select, .sign-in form button, .sign-in form .user-type {
+  border-radius: .5rem;
+  padding: 1rem;
+  border: 1px solid #707070;
+}
+
+.sign-up form select, .sign-in form select {
+  color: #707070;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right, white;
+  background-position-x: 97%;
+}
+
+.sign-up form button, .sign-in form button {
+  cursor: pointer;
+  background: #106cbd;
+  color: white;
+  padding: 1.5rem 0;
+  border: none;
+  border-radius: .5rem;
+  font-weight: 700;
+  position: relative;
+  border: 1px solid #106cbd;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.sign-up form button:active, .sign-in form button:active {
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+          box-shadow: 0.5rem 0.5rem 0.5rem rgba(0, 0, 0, 0.1);
+  bottom: .1rem;
+}
+
+.sign-up form button:hover, .sign-in form button:hover {
+  color: #106cbd;
+  border: 1px solid #106cbd;
+  background: transparent;
+}
+
+.sign-up form .user-type, .sign-in form .user-type {
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4rem;
+  color: #707070;
+}
+
+.sign-in .remember-me {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: .5rem;
+  text-align: center;
+}
+
+.sign-in .remember-me label {
+  font-size: 1.4rem;
+  color: #707070;
+}
+
+.sign-in button {
+  margin-top: 2rem;
+}
+
+.sign-in a {
+  margin-left: 4rem;
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #707070;
+}
+
+main {
+  height: calc(100vh - 100px);
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10rem;
+  gap: 2rem;
+}
+
+main h1, main h2 {
+  color: white;
+  font-size: 3.6rem;
+  font-weight: 100;
+  margin: 0;
+}
+
+main h1 {
+  font-weight: 700;
+}
+
+main form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50rem;
+}
+
+main form input, main form a {
+  border-radius: 1rem 0 0 1rem;
+  padding: 2rem;
+  border: 1px solid #707070;
+}
+
+main form input {
+  width: 35rem;
+}
+
+main form a {
+  text-decoration: none;
+  cursor: pointer;
+  background: #106cbd;
+  color: white;
+  width: 150px;
+  border-radius: 0 1rem 1rem 0;
+  border: 0;
+}
+
+main .learn-more {
+  cursor: pointer;
+  margin-top: 2rem;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  padding: 1.2rem 3rem;
+  border: 2px solid white;
+  color: white;
+  border-radius: .5rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .learn-more a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+main .learn-more:hover {
+  background: white;
+  color: #106cbd;
+}
+
+main .learn-more:hover a {
+  color: #707070;
+}
+/*# sourceMappingURL=style.css.map */

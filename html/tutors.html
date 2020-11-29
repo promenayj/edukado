@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-firestore.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../img/logo.png" type="image/icon type">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Tutors</title>
+  </head>
+<body>
+
+  <!-- Header -->
+  <nav>
+    <div class="logo">
+      <img src="../img/logo.png" alt="">
+      <h1>Edukado</h1>
+    </div>
+    <div class="tabs">
+      <a href="index.html">Home</a>
+      <a href="tutors.html" class="active">Find Tutors</a>
+      <a href="login.html">Sign in</a>
+      <a href="register.html" class="create">Create an account</a>
+    </div>
+  </nav>
+
+  <div class="tutor-body">
+    <form class="search-info">
+      <input type="text" placeholder="Topic/Subject" required>
+      <select id="gender" name="gender" required>
+        <option value="" disabled selected>Tutor Availability</option>
+        <option value="morning">Morning: 6am-9am</option>
+        <option value="late-morning">Late Morning: 9am-12pm</option>
+        <option value="afternoon">Afternoon: 12pm-3pm</option>
+        <option value="late-afternoon">Late Afternoon: 3pm-6pm</option>
+        <option value="evening">Evening: 6pm-9pm</option>
+        <option value="late-evening">Late Evening: 9pm-12am</option>
+      </select>
+      <div class="slider">
+        <input type="text" class="rate-val" value="250">
+        <span>Rate per hour</span>
+        <input type="range" id="rate" name="rate"
+         min="250" max="1000" value="0" step="50" onchange="updateRate()">
+        <span class="min">250php</span>
+        <span class="max">1000php</span>
+      </div>
+      <input type="text" placeholder="Location" required>
+      <button class="btn-search">Search</button>
+    </form>
+
+    <div class="renderHere">
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+  <script class="template" type="text/x-handlebars-template">
+    <div class="tutors-info" loading="lazy">
+      <img src="../img/avatar.svg" alt="" loading="lazy" class="avatar">
+      <div class="details">
+        <h1> {{first_name}} {{last_name}} </h1>
+        <p> {{ info }}</p>
+        <div class="actions">
+          <button class="book-now">Book now</button>
+          <button class="message">Message</button>
+        </div>
+      </div>
+    </div>
+  </script>
+
+  <script src="../js/tutors.js"></script>
+  <!-- <script src="../js/insert-update.js"></script> -->
+
+</body>
+</html>

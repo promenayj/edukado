@@ -1,0 +1,302 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  
+  font-size: 10px;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+h2 {
+  font-weight: 300;
+}
+
+input:required, select:required {
+  box-shadow:none;
+}
+
+$grey: #707070;
+$primary: #106cbd;
+
+@import "extension";
+
+/* Header ***********************************************************************************/
+nav {
+  position: relative;
+  z-index: 10;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rem;
+  box-shadow: 0 0 1rem rgba($color: #000000, $alpha: .5);
+
+  h1 {
+    font-size: 2rem;
+  }
+
+
+  .tabs {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+
+    a {
+      text-decoration: none;
+      color: $primary;
+      transition: .3s;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 1rem;
+
+      &:hover {
+        color: $grey;
+      }
+    }
+
+    .active {
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: .3rem;
+        background: $primary;
+      }
+    }
+
+    .create {
+      height: 40px;
+      padding: 1rem 2rem;
+      border-radius: .5rem;
+      border: 2px solid $primary;
+
+      &:hover {
+        background: $primary;
+        color: white;
+      }
+    }
+  }
+
+  .logo {
+    height: 100%;
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+
+    h1 {
+      color: $primary;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 50%;
+    }
+  }
+}
+
+/* Sign up ***********************************************************************************/
+.sign-up, .sign-in {
+  margin: 5rem auto;
+  height: 60rem;
+  width: 110rem;
+  display: flex;
+  background: #E7E7E7;
+
+  img {
+    object-fit: cover;
+    height: 100%;
+    width: 50%;
+  }
+  
+  form {
+    margin: auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+
+    & > div {
+      display: flex;
+      gap: 2rem;
+    }
+
+    h1 {
+      color: $primary;
+      font-weight: 700;
+    }
+
+    p {
+      margin: 0;
+      margin-bottom: 2rem;
+      color: $grey
+    }
+
+    input, select, button, .user-type {
+      border-radius: .5rem;
+      padding: 1rem;
+      border: 1px solid $grey;
+    }
+
+    select {
+      color: $grey;
+      appearance: none;
+      background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right, white;
+      background-position-x: 97%;
+    }
+    
+    button {
+      cursor: pointer;
+      background: $primary;
+      color: white;
+      padding: 1.5rem 0;
+      border: none;
+      border-radius: .5rem;
+      font-weight: 700;
+      position: relative;
+      border: 1px solid $primary;
+      transition: .3s;
+
+      &:active {
+        box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .1);
+        bottom: .1rem;
+      }
+
+      &:hover {
+        color: $primary;
+        border: 1px solid $primary;
+        background: transparent;
+      }
+    }
+
+    .user-type {
+      border: none;
+      display: flex;
+      justify-content: center;
+      gap: 4rem;
+      color: $grey;
+    }
+    
+
+  }
+}
+
+.sign-in {
+  
+  .remember-me {
+    display: flex;
+    justify-content: center;
+    gap: .5rem;
+    text-align: center;
+
+    label {
+      font-size: 1.4rem;
+      color: $grey;
+    }
+  }
+
+  button {
+    margin-top: 2rem;
+  }
+
+  a {
+    margin-left: 4rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: $grey;
+  }
+}
+
+main {
+  height: calc(100vh - 100px);
+  // overflow: hidden;
+  background-image: url(../img/banner.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10rem;
+  gap: 2rem;
+
+  h1, h2 {
+    color: white;
+    font-size: 3.6rem;
+    font-weight: 100;
+    margin: 0;
+  }
+
+  h1 {
+    font-weight: 700;
+  }
+
+  form {
+    display: flex;
+    width: 50rem;
+
+    input, a {
+      border-radius: 1rem 0 0 1rem;
+      padding: 2rem;
+      border: 1px solid $grey;
+    }
+
+    input {
+      width: 35rem;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer;
+      background: $primary;
+      color: white;
+      width: 150px;
+      border-radius: 0 1rem 1rem 0;
+      border: 0;
+    }
+  }
+  
+  .learn-more {
+    cursor: pointer;
+    margin-top: 2rem;
+    align-self: flex-start;
+    padding: 1.2rem 3rem;
+    border: 2px solid white;
+    color: white;
+    border-radius: .5rem;
+    transition: .3s;
+
+    a {
+      color: white;
+      text-decoration: none;
+      transition: .3s;
+    }
+
+    &:hover {
+      background: white;
+      color: $primary;
+
+      a {
+        color: $grey;
+      }
+    }
+  }
+}

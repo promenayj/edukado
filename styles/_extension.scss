@@ -1,0 +1,191 @@
+.msg {
+  background: $primary;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem;
+  display: none;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Tutors -------------------------------------------------------------------------
+.tutor-body {
+  display: flex;
+  padding: 10rem;
+  gap: 10rem;
+}
+
+// Form
+.search-info {
+  width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  
+  .slider {
+    margin: 2rem 0;
+    position: relative;
+    .rate-val {
+      width: 80px;
+    }
+    #rate {
+      margin-top: 2rem;
+    }
+    .max, .min {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      color: $grey;
+      font-size: 1.4rem;
+    }
+    .min {
+      left: 0;
+    }
+  }
+
+  input, select, button {
+    border-radius: .5rem;
+    padding: 1rem;
+    border: 1px solid $grey;
+  }
+
+  select {
+    color: $grey;
+    appearance: none;
+    background: url(../img/icon/dropdown.png) no-repeat right, white;
+    background-size: 1.5rem;
+    background-position-x: 97%;
+  }
+
+  p, span {
+    color: $grey;
+  }
+
+  button {
+    cursor: pointer;
+    background: $primary;
+    color: white;
+    border: none;
+    border-radius: .5rem;
+    position: relative;
+    border: 1px solid $primary;
+    transition: .3s;
+
+    &:active {
+      box-shadow: .5rem .5rem .5rem rgba($color: #000000, $alpha: .1);
+      bottom: .1rem;
+    }
+
+    &:hover {
+      color: $primary;
+      border: 1px solid $primary;
+      background: transparent;
+    }
+  }
+}
+
+.tutors-info {
+  display: flex;
+  background: #EBEBEB;
+  height: 230px;
+  width: 680px;
+  // padding: 1rem;
+  gap: 1rem;
+  position: relative;
+  margin-bottom: 5rem;
+
+  .details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+
+    p {
+      font-size: 1.4rem;
+      color: $grey;
+    }
+    
+    .actions {
+      position: absolute;
+      bottom: 1rem;
+
+      button {
+        padding: 1rem 2rem;
+        cursor: pointer;
+        border: none;
+        border: 1px solid transparent;
+        font-size: 1.4rem;
+        transition: .3s;
+      }
+      .book-now {
+        color: white;
+        background:  $primary;
+
+        &:hover {
+          border: 1px solid $primary;
+          background: transparent;
+          color: $primary;
+        }
+      }
+
+      .message {
+        background: #C4C4C4;
+
+        &:hover {
+          border: 1px solid $grey;
+          background: transparent;
+          color: $grey;
+        }
+      }
+    }
+  }
+  
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  img {
+    object-fit: cover;
+    background: white;
+    height: 100%;
+    // width: 150px;
+  }
+
+}
+
+/* reg-as-tutor ********************************************************************/
+.reg-as-tutor {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  padding: 4rem;
+  background: red;
+
+  h1 {
+    color: $primary;
+    font-weight: 700;
+  }
+
+  label {
+    color: $grey;
+    font-size: 1.4rem;
+  }
+
+  textarea {
+    width: 40rem;
+    height: 10rem;
+  }
+
+  input, button, textarea {
+    border-radius: .5rem;
+    width: 40rem;
+    padding: 1rem;
+    border: 1px solid $grey;
+  }
+}
