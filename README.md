@@ -14,7 +14,8 @@ https://www.figma.com/file/8jyTnVMc9ZVIaAcSzrLubp/HackFest2020?node-id=0%3A1
 
 ### Note
 ```
-We were unable to accomplish a fully-functioning app because we focused on identifying the main problem and on how we can address it. However, the prototype is already on Figma which you can check to give you the overall concept of what we have been working on. 
+We were unable to accomplish a fully-functioning app because we focused on identifying the main problem and on how we can address it. 
+However, the prototype is already on Figma which you can check to give you the overall concept of what we have been working on. 
 ```
 
 ### Thank you and God bless!
