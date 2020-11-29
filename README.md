@@ -3,7 +3,9 @@
 Edukado is an educational technology platform where students can find tutors related to their concerned topic or subject at their most convenient time.
 
 ## Team name
+```
 Cipher & Voice
+```
 
 ### Figma link
 ```
